@@ -4,7 +4,6 @@ library(rvest)
 library(plyr)
 library(data.table)
 library(splitstackshape)
-library(RSelenium)
 library(pdftools)
 
 ###########################################################################
