@@ -5,6 +5,7 @@ library(plyr)
 library(data.table)
 library(splitstackshape)
 library(RSelenium)
+library(pdftools)
 
 ###########################################################################
 dat <- read.csv("china_hearings.csv")
@@ -85,8 +86,6 @@ pdf_links <- link$link[link$pdf ==1]
 pdf_links <- as.character(pdf_links)
 pdf_links[c(2:7)] <- paste0("https://www.cecc.gov", pdf_links[c(2:7)])
 
-#FOR PDF EXTRACTION, SKIP TO WEBSCRAPING3
-
 #which links have htmls
 html_links <- link$link[link$html ==1]
 html_links <- as.character(html_links)
@@ -154,3 +153,29 @@ dat[1,]
 
 #how many hearings are missing transcripts?
 sum(is.na(dat$transcripts))
+
+#########################################################
+#some of these transcripts will be stored as pdfs; others simply won't exist
+
+#let's go back to the page to look at the pdf links
+
+pdf_links %>% head()
+
+#what is wrong with these links?
+#no initial root
+#check wesite for root
+#https://www.cecc.gov/
+pdf_links <- as.character(pdf_links)
+pdf_links[c(2:7)] <- paste0("https://www.cecc.gov", pdf_links[c(2:7)])
+
+#open up pdf link 
+
+pdf_text(pdf_links[1])
+
+#what to do with lots of links?
+
+#what is in the links? does this differ by page?
+
+#gonna have to play around with if_else() statements to not double-scrape info
+
+
