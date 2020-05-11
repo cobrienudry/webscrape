@@ -1,5 +1,3 @@
-
-
 library(tidyverse)
 library(rvest)
 library(plyr)
@@ -8,7 +6,7 @@ library(splitstackshape)
 
 #Example 1
 
-#Hearings from the Congressional-Executive Commission on China
+#Press releases from State Dept
 
 #Use selector gadget to find what's on the page
 
