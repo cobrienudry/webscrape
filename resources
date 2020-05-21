@@ -1,0 +1,19 @@
+#List of resources for web-scraping
+
+#SelectorGadget 
+#for identifying where the information you re interested in is on a webpage
+https://selectorgadget.com/
+
+#reading PDFs into R
+https://data.library.virginia.edu/reading-pdf-files-into-r-for-text-mining/
+
+#intro to rvest
+#basic web-scraping R package
+https://blog.rstudio.com/2014/11/24/rvest-easy-web-scraping-with-r/
+
+
+#web scraping with python
+https://realpython.com/beautiful-soup-web-scraper-python/
+
+
+
